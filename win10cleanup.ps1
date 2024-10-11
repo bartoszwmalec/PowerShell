@@ -114,8 +114,10 @@ Write-Verbose $size
 Get-Service -Name wuauserv | Start-Service -Verbose -ErrorAction SilentlyContinue 
 ## Windows Update Service has been Started successfully! 
 }
+$currentDate = Get-Date
+Write-Host "Current date and time: $currentDate"
+
 Cleanup
-##update Mcafee antivirus
+
 Stop-Transcript 
-Sleep -Seconds 20
-Cleanup
+Start-Sleep -Seconds 20
